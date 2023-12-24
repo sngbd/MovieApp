@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MovieApp</string>
+
+    <string name="recycler_movie_image">recycler_movie_image</string>
+</resources>

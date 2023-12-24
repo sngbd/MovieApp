@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingStart="6dp"
+    android:paddingEnd="6dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/movie_item_card_view"
+        style="@style/CardView"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/movie_item_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="110dp"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:paddingBottom="5dp"
+            android:paddingEnd="4dp"
+            android:paddingStart="24dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/movie_item_title"
+                android:fontFamily="@font/open_sans_semibold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:maxLength="40"
+                android:singleLine="true"
+                android:text=""
+                android:textSize="18sp" />
+
+            <RatingBar
+                android:id="@+id/movie_item_rating"
+                style="?android:attr/ratingBarStyleSmall"
+                android:rating="3.65"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/movie_item_type"
+                android:fontFamily="@font/open_sans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:ellipsize="end"
+                android:maxLength="40"
+                android:singleLine="true"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/movie_item_release_date"
+                android:fontFamily="@font/open_sans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:layout_marginBottom="6dp"
+                android:maxLength="40"
+                android:singleLine="true"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:id="@+id/movie_item_overview"
+                android:fontFamily="@font/open_sans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/movie_item_image_card"
+        style="@style/CardView"
+        android:layout_width="120dp"
+        android:layout_height="170dp"
+        app:cardElevation="6dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/movie_item_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/recycler_movie_image"
+            android:scaleType="fitXY" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
