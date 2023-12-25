@@ -16,7 +16,7 @@ data class MovieDetailItem(
     @SerializedName("homepage")
     val homepage: String,
     @SerializedName("id")
-    val id: Int,
+    val id: Long,
     @SerializedName("imdb_id")
     val imdbId: String,
     @SerializedName("original_language")
