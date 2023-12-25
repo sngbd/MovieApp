@@ -11,10 +11,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.movieapp.MovieDetailActivity
 import com.example.movieapp.R
+import com.example.movieapp.api.MovieDetailItem
 import com.example.movieapp.api.Result
-
-class MovieItemAdapter(private val movieResponseItem: List<Result>) :
-    RecyclerView.Adapter<MovieItemAdapter.ViewHolder>() {
+class StarItemAdapter(private val movieResponseItem: List<MovieDetailItem>) :
+    RecyclerView.Adapter<StarItemAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view =
@@ -22,16 +22,15 @@ class MovieItemAdapter(private val movieResponseItem: List<Result>) :
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: StarItemAdapter.ViewHolder, position: Int) {
         val data = movieResponseItem[position]
         holder.title.text = data.title
         holder.rating.rating = (data.voteAverage.toFloat() / 10) * 5
 
-        val genreFinder = GenreFinder()
         var genreName = ""
-        for (genre in data.genreIds) {
-            genreName += genreFinder.getGenreNameById(genre)
-            if (genre != data.genreIds.last()) {
+        for (genre in data.genres) {
+            genreName += genre.name
+            if (genre != data.genres.last()) {
                 genreName += ", "
             }
         }

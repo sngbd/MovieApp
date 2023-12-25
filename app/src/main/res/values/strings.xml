@@ -2,4 +2,13 @@
     <string name="app_name">MovieApp</string>
 
     <string name="recycler_movie_image">recycler_movie_image</string>
+    <string name="overview">OVERVIEW</string>
+    <string name="runtime_mins">runtime: ---mins</string>
+    <string name="budget_k">budget: $---k</string>
+    <string name="review">REVIEW</string>
+    <string name="reviews">REVIEWS</string>
+    <string name="cast">CAST</string>
+    <string name="crew">CREW</string>
+    <string name="detail_backdrop_image">detail backdrop image</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

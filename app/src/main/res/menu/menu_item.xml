@@ -6,7 +6,7 @@
         android:title="Home"
         android:icon="@drawable/icon_home"/>
     <item
-        android:id="@+id/bookmark"
-        android:title="Bookmarks"
-        android:icon="@drawable/icon_bookmark"/>
+        android:id="@+id/stars"
+        android:title="Stars"
+        android:icon="@drawable/star_white"/>
 </menu>
